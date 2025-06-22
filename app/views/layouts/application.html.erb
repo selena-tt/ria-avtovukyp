@@ -35,8 +35,11 @@
         <a href="#" class="flex items-center space-x-3">
           <span class="self-center text-md sm:text-2xl font-semibold whitespace-nowrap text-white">RIA Автовикуп</span>
         </a>
-        <div class="flex md:order-2 space-x-3 md:space-x-0">
-          <a href="tel:+380682681024" type="button" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm p-2 sm:px-4 sm:py-2 text-center">+38 (068) 268 10 24</a>
+        <div class="flex gap-2 items-center space-x-3 text-white font-medium text-sm md:order-2 md:space-x-0">
+          <a href="tel:+380682681024" type="button" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 rounded-lg p-2 sm:px-4 sm:py-2 text-center">+38 (068) 268 10 24</a>
+          <%= link_to('UA', root_path(locale: :uk), class: "p-2 rounded-lg hover:bg-blue-600 #{'bg-blue-600' if params[:locale] == 'uk'}") %>
+          <span>|</span>
+          <%= link_to('RU', root_path(locale: :ru), class: "p-2 rounded-lg hover:bg-blue-600 #{'bg-blue-600' if params[:locale] == 'ru'}") %>
         </div>
       </div>
     </nav>
